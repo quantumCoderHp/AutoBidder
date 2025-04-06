@@ -2,8 +2,12 @@ package com.autobidder.auth.entity;
 
 import java.time.LocalDateTime;
 
+import javax.management.relation.Role;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -31,8 +35,8 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false, length = 50)
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Column(name = "is_active")
     private boolean isActive = true;
