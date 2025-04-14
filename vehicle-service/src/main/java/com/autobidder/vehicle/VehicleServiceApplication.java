@@ -1,4 +1,4 @@
-package com.hardik.autobidder.vehicle;
+package com.autobidder.vehicle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
